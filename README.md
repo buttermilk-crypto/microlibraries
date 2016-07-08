@@ -1,13 +1,14 @@
 # Microlibraries
 
 Microlibraries are specially packaged units of source code. They have some special properties which seem
-like good practice to me now but may rub some people the wrong way.
+like good practice to me at this particular moment but may rub some other people the wrong way.
 
-I first started using this particular approach when I was working on the [TweetPepper project](https://github.com/buttermilk-crypto/tweetPepper). I was focused there to produce a library which had no dependencies. (I settled for one.) 
+I first started toying with this approach when I was working on the [TweetPepper project](https://github.com/buttermilk-crypto/tweetPepper). I was focused there on producing a library which had no dependencies. (I settled for one.) 
 
-But in working to reduce dependencies I discovered I needed a bit here and a piece there.
+But in working to reduce dependencies I discovered I needed a bit here and a piece there from other open
+source projects.
 
- I found that for some cases I wanted code which would ordinarily have required bringing in a large jar file such as with Bouncy Castle, when in reality I did not need all of that code, just the one bit of functionality I needed. 
+I found that for some cases I wanted code which would ordinarily have required bringing in a large jar file such as with Bouncy Castle, or multiple dependent libraries, when in reality I did not need all of that code, just the one bit of functionality I needed. 
 
 I have no doubt there are ways to generate an extract of a jar based on profiling or other detection of what is used. But, tools like that are out of my reach. What I did was just manual extraction based on the source code. 
 
@@ -30,7 +31,8 @@ I am still working out the taxonomy of a microlibrary. Microlibraries seem have 
   - One or a small integer number of source files
   - Zero dependencies on other code outside the JDK.
   - A simple service interface such as a single method
+  - must be larger than a gist or snippit. There has to be enough to encapsulate
   
-Microlibraries may have something to do with microservices. I'm not sure what yet, but intrinsically there seems to be a connection. 
+Microlibraries may have something to do with [microservices](http://martinfowler.com/articles/microservices.html). I'm not sure what yet, but intrinsically there seems to be a connection. 
 
 
